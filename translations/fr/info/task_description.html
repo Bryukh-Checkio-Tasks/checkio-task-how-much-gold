@@ -1,0 +1,75 @@
+<p>
+    Notre trio préféré a découvert une barre de métal mystérieuse,
+    d'un alliage composé des métaux suivants : or (gold), fer (iron), cuivre (copper) et étain (tin).
+    On ne connaît pas la quantité de chaque métal dans la barre, 
+    mais nous connaissons la proportion de différents alliages.
+    Par exemple : en proportion,  l'alliage or et étain représente 1/2 le la masse de la barre, 
+    l'alliage or et fer représente 1/3, l'alliage or et cuivre 1/4.
+    "La proportion de l'alliage or et étain est 1/2" signifie que l'or et étain ensemble (leur somme, pas leur ratio)
+    constituent 1/2 de la barre complète.
+    Il vous faut déterminer la proportion d'or dans la barre entière.
+</p>
+
+<p>
+    Les proportions sont données sous forme d'un dictionnaire dont les clés sont les noms des alliages,
+    et les valeurs sont les proportions correspondantes.
+    Les noms des alliages sont réprésentés par des chaînes de caractères (string), qui sont constituées des noms des deux métaux,
+    séparés par un tiret
+    (Ex: "gold-tin", "iron-copper", "iron-gold").
+    Les proportions sont représentées par des fractions de type de données (<strong>fractions.Fraction</strong>.
+    <a href="http://docs.python.org/2/library/fractions.html">En savoir davantage sur le module fractions</a>).
+</p>
+<p style="text-align: center;">
+    <img class="for_info_only"
+         title="alloys"
+         src="{{MEDIA}}alloys.png"
+         alt="alloys"
+         width="600px"/>
+    <img class="for_editor_only"
+         title="alloys"
+         src="{{MEDIA}}alloys.png"
+         alt="alloys"
+         width="380px"/>
+</p>
+<p>
+    Il vous faut retourner la proportion d'or dans la barre, comme fraction de type (<strong>fractions.Fraction</strong>).
+</p>
+
+
+<p>
+    <strong>Input: </strong>Les noms d'alliages et les proportions associées, comme dictionnaire. 
+</p>
+
+<p>
+    <strong>Output: </strong>La proportion d'or dans la barre, comme fractions.Fraction.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemple:</strong>
+    </p>
+    <pre class="brush: python">checkio({
+    'gold-tin': Fraction(1, 2),
+    'gold-iron': Fraction(1, 3),
+    'gold-copper': Fraction(1, 4),
+    }) == Fraction(1, 24)
+checkio({
+    'tin-iron': Fraction(1, 2),
+    'iron-copper': Fraction(1, 2),
+    'copper-tin': Fraction(1, 2),
+    }) == Fraction(1, 4)</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Application: </strong>
+    Cette mission vous apprend à utiliser le module <em>fractions</em> de Python.
+    Le type de données Fraction est très utile lorsque l'on veut éviter les erreurs d'arrondis inhérentes au type float.
+    Vous pouvez aussi apprendre comment manipuler des systèmes d'équations à plusieurs inconnues.
+</p>
+
+<p>
+    <strong>Préconditions: </strong><br>
+    Tous les tests ont une solution.<br>
+    La barre contient les quatre métaux.<br>
+</p>
